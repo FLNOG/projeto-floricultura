@@ -52,7 +52,7 @@
                     } else {
                 %>
                 <tr>
-                    <td colspan="4">Nenhum produto encontrado.</td>
+                    <td colspan="4">Nenhum pedido encontrado.</td>
                 </tr>
                 <%
                     }

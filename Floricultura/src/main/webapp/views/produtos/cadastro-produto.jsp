@@ -51,6 +51,7 @@
     		<input type="hidden" name="action" value="buscar">    		
     		<input type="submit" value="Buscar Produtos">
 		</form>
+		
         <table>
             <thead>
                 <tr>

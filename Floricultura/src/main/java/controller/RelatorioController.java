@@ -31,6 +31,7 @@ public class RelatorioController extends HttpServlet {
         String action = request.getParameter("action");
 
         if (action == null || action.isEmpty()) {
+        	System.out.println("Action está nula.");
             action = "listar";
         }
 

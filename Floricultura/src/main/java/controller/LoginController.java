@@ -13,7 +13,7 @@ import dao.ClienteDAO;
 
 import java.io.IOException;
 
-import service.AuthService;
+import utils.AuthService;
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
@@ -29,6 +29,7 @@ public class LoginController extends HttpServlet {
         String action = request.getParameter("action");
 
         if (action == null) {
+        	System.out.println("Action está nula.");
             cadastro(request, response);
             return;
         }

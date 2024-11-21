@@ -20,11 +20,13 @@
     </header>
 
     <main>
-        <form action="${pageContext.request.contextPath}/clientes?action=buscar" method="GET" class="form-prod">
-            <label><strong>Buscar Cliente:</strong></label>
-            <input type="text" name="NomeBusca" placeholder="Nome do Cliente" required>
-            <input type="submit" value="Buscar Clientes">
-        </form>
+        
+        <form action="${pageContext.request.contextPath}/clientes" method="GET" class="form-prod">
+    		<input type="hidden" name="action" value="buscar">
+    		<label><strong>Buscar Produto:</strong></label>
+    		<input type="text" name="NomeBusca" placeholder="Nome do Cliente" required>
+    		<input type="submit" value="Buscar Clientes">
+		</form>
 
         <table>
             <thead>

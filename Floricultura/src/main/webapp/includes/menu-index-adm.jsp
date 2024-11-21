@@ -9,7 +9,7 @@
     <nav class="menu">
         <ul>
             <li><a href="${pageContext.request.contextPath}/index.jsp">Página Inicial</a></li>
-            <li><a href="${pageContext.request.contextPath}/views/clientes/meu-perfil.jsp">Meu Perfil</a></li>
+            <li><a href="${pageContext.request.contextPath}/views/perfil/meu-perfil.jsp?id=${sessionScope.idCliente}">Meu Perfil</a></li>
             <li><a href="${pageContext.request.contextPath}/views/vendas/carrinho.jsp">Carrinho</a></li>
             <li><a href="${pageContext.request.contextPath}/views/produtos/cadastro-produto.jsp">Área Restrita</a></li>
             <li><a href="${pageContext.request.contextPath}/login?action=logout">Sair</a></li>

@@ -60,9 +60,9 @@
 	
 	    <input type="submit" value="Salvar">
 	</form>
-	<form action="${pageContext.request.contextPath}/views/perfil/meu-endereco.jsp" method="GET" class="form-prod">
+	<!-- <form action="${pageContext.request.contextPath}/views/perfil/meu-endereco.jsp" method="GET" class="form-prod">
         <input type="hidden" name="id" value="${sessionScope.idCliente}">
         <input type="submit" value="Cancelar">
-    </form>
+    </form> !-->
 </body>
 </html>

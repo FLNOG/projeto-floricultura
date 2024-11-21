@@ -27,6 +27,7 @@ public class ProdutoController extends HttpServlet {
         String action = request.getParameter("action");
         
         if (action == null) {
+        	System.out.println("Action está nula.");
         	cadastrarProduto(request, response);
             return;
         }
@@ -81,10 +82,36 @@ public class ProdutoController extends HttpServlet {
 
     private void cadastrarProduto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String descricao = request.getParameter("descricao");
-        int quantidade = Integer.parseInt(request.getParameter("quantidade"));
-        double preco = Double.parseDouble(request.getParameter("preco"));
         String detalhes = request.getParameter("detalhes");
         String imagem = request.getParameter("imagem");
+
+        String quantidadeStr = request.getParameter("quantidade");
+        String precoStr = request.getParameter("preco");
+
+        int quantidade = 0;
+        if (quantidadeStr != null && !quantidadeStr.isEmpty()) {
+            try {
+                quantidade = Integer.parseInt(quantidadeStr);
+            } catch (NumberFormatException e) {
+                quantidade = 0;
+            }
+        }
+
+        double preco = 0.0;
+        if (precoStr != null && !precoStr.isEmpty()) {
+            try {
+                preco = Double.parseDouble(precoStr);
+            } catch (NumberFormatException e) {
+                preco = 0.0;
+            }
+        }
+
+        if (descricao == null || descricao.isEmpty() || quantidade <= 0 || preco <= 0) {
+            request.setAttribute("erro", "Preencha todos os campos corretamente.");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("views/produtos/cadastro-produto.jsp");
+            dispatcher.forward(request, response);
+            return;
+        }
 
         Produto produto = new Produto(descricao, quantidade, preco, detalhes, imagem);
         produtoDAO.cadastrarProduto(produto);

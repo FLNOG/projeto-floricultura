@@ -59,9 +59,9 @@
 
         <input type="submit" value="Salvar">
     </form>
-    <form action="${pageContext.request.contextPath}/views/perfil/meu-perfil.jsp" method="GET" class="form-prod">
+    <!--  <form action="${pageContext.request.contextPath}/views/perfil/meu-perfil.jsp" method="GET" class="form-prod">
         <input type="hidden" name="id" value="${sessionScope.idCliente}">
-        <input type="submit" value="Cancelar">
-    </form>
+        <input type="submit" value="Cancelar"> 
+    </form> -->
 </body>
 </html>
