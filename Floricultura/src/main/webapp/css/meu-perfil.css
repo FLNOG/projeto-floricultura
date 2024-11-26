@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f4fc;
+    color: #4d3475;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+form.form-prod {
+    background-color: #ffffff;
+    /* border: 2px solid #dab6f7; */
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form.form-prod label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4d3475;
+}
+
+form.form-prod input[type="text"],
+form.form-prod input[type="date"],
+form.form-prod input[type="password"] {
+    width: calc(100% - 12px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dab6f7;
+    border-radius: 5px;
+    background-color: #fdfaff;
+    color: #4d3475;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+form.form-prod input[type="text"]:focus,
+form.form-prod input[type="date"]:focus,
+form.form-prod input[type="password"]:focus {
+    border-color: #8a2be2;
+}
+
+form.form-prod input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #8a2be2;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+form.form-prod input[type="submit"]:hover {
+    background-color: #6c1db8;
+}
+
+form.form-prod input[type="submit"]:last-of-type {
+    background-color: #8a2be2;
+    color: #ffffff;
+}
+
+form.form-prod input[type="submit"]:last-of-type:hover {
+    background-color: #dab6f7;
+}
+
+jsp\:include {
+    margin-bottom: 20px;
+}

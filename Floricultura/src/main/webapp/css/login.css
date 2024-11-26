@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, rgba(219,188,247,1) 20%, rgba(208,153,231,1) 55%, rgba(192,190,255,1) 96%);
+}
+
+.senha-estilo {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.senha-estilo input {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 10px;
+    height: 40px;
+    border: 2px solid #440070;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.senha-estilo i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #440070;
+    font-size: 1.4em;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #440070;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #9E30E5;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+article {
+    display: flex;
+    height: 80vh;
+    width: 60%;
+    background-color: white;
+    box-shadow: 0px 0px 30px 0px black;
+}
+
+h1 {
+    font-size: 60px;
+    color: #440070;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+div p {
+    font-size: 30px;
+    color: #440070;
+    font-weight: bold;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: auto;
+}
+
+section:first-child {
+    width: 50%;
+    background: transparent;
+    backdrop-filter: blur(30px);
+}
+
+section:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-image: url(/img/florPI.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-child(2) img {
+    height: 60%;
+    width: 60%;
+}
+
+.button {
+    background-color: #EDD2FF;
+    color: #440070;
+    font-size: 20px;
+    width: 45%;
+    height: 6%;
+    border-radius: 15px;
+    border: 2px solid #EDD2FF;
+    font-weight: bold;
+    transition: .7s;
+}
+
+.button:hover {
+    background-color: #440070;
+    transform: scale(1.05);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.esqueci-senha {
+    text-align: center;
+}
+
+.esqueci-senha a {
+    color: #440070;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.esqueci-senha a:hover {
+    text-decoration: underline;
+}

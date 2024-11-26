@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+nav {
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    background-color: #3d3c3b;
+    align-items: left;
+    position: fixed;
+}
+
+.MyStore {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Mohave', sans-serif;
+}
+
+#nome_menu {
+    color: white;
+    padding: 15px 0 15px 0;
+    text-align: center;
+    font-size: 1.95em;
+}
+
+#nome_store {
+    color: #c00578;
+    padding: 15px 0 15px 0;
+    text-align: center;
+    font-size: 1.95em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px 15px 10px;
+}
+
+nav a:hover {
+    background-color: #c00578;
+}
+
+nav a.active {
+    padding-left: 8px;
+    border-left: 7px solid #880254;
+}
+.img {
+    filter: opacity(0.5) drop-shadow(0 0 0 white) contrast(100%) brightness(100);
+    height: 25px;
+    width: 42px;
+    padding-right: 15px;
+}
+
+.dropdown a {
+	display: flex;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #777674;
+    min-width: 200px;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 0px 10px 55px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #880254;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
